@@ -9,5 +9,9 @@ class UsersController < ApplicationController
     @user.save
   end
 
+  def login
+    render :login
+  end
+
 
 end
