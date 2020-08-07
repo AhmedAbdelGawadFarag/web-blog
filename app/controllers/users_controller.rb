@@ -9,6 +9,11 @@ class UsersController < ApplicationController
     @user.save
   end
 
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end
+
   def login
     render :login
   end

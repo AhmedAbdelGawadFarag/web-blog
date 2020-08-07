@@ -1,10 +1,11 @@
 body{
     background-color: #121212;
 }
-h1{
+.user h1{
     text-align: center;
     color: white;
 }
+
 .user{
     background-color: #212121;
     display: block;
@@ -16,7 +17,7 @@ h1{
     width: 400px;
 }
 
-.singupButton{
+.user .singupButton{
     display: inline;
     width: auto;
     margin-left: 40%;
@@ -25,10 +26,10 @@ h1{
 
 }
 
-input{
+.user input{
     width: 90%;
 }
 
-label{
+.user label{
 color: white;
 }

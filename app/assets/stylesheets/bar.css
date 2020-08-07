@@ -1,0 +1,12 @@
+.bar{
+    background-color: red;
+
+}
+
+.bar p,.username{
+    display: inline-block;
+    margin-right: 10%;
+    background-color: white;
+}
+
+
