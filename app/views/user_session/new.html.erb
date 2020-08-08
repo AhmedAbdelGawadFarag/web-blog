@@ -1,9 +1,9 @@
 <div class="user">
   <h1 class> login  </h1>
 
-  <form action="/users" method="get">
+  <form action="/user_session" method="post">
 
-    <%= render 'form' %>
+    <%= render 'partials/form',action: :login %>
 
     <input class="singupButton" type="submit" value="sign in !">
 

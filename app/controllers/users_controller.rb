@@ -14,9 +14,4 @@ class UsersController < ApplicationController
     render :show
   end
 
-  def login
-    render :login
-  end
-
-
 end
