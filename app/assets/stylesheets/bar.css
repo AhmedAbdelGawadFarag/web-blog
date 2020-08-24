@@ -1,12 +1,18 @@
 .bar{
-    background-color: red;
-
+    /*background-color: red;*/
+    padding-left: 4%;
+    padding-top: 1%;
 }
 
-.bar p,.username{
+.bar a{
     display: inline-block;
-    margin-right: 10%;
-    background-color: white;
+    margin-right: 2%;
+    /*background-color: white;*/
+    color: white;
 }
 
+.bar .login{
+   margin-right: 8%;
+    float: right;
+}
 

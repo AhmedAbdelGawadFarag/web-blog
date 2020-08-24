@@ -6,7 +6,12 @@ class UserSessionController < ApplicationController
 
   def create
     if login params[:user][:email], params[:user][:password]
+      user = User.find_by_email(params[:user][:email])
+      session[:user_id] = user.id
       redirect_to posts_path
+    else
+      flash[:loginfail] = "failed login"
+      redirect_to login_url
     end
   end
 
@@ -20,4 +25,7 @@ class UserSessionController < ApplicationController
 
   end
 
+  def home
+    render :home
+  end
 end

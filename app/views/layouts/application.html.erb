@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WebBlog</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>WebBlog</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+<div class="bar">
+
+  <a>Home</a>
+  <a>Articles</a>
+  <a>Tags</a>
+  <a class="login" href="<%= login_url %>">Log in</a>
+
+  <% if logged_in %>
+    <a> Hi,<%= current_user.name %></a>
+  <% end %>
+
+</div>
+
+
+
+
+<%= yield %>
+</body>
 </html>
