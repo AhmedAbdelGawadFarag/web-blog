@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     comment = Comment.new(params.require(:comment).permit("body"))
     comment.post_id = postid
     comment.save()
-
+    redirect_to post_url(postid)
   end
 
 end

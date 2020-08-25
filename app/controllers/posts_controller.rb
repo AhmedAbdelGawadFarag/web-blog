@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    userid = session[:user_id]  
+    userid = session[:user_id]
     post = Post.new(params.require('post').permit('title', 'body'))
     post.user_id = userid
     post.save()

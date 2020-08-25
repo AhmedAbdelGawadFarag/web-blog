@@ -1,3 +1,4 @@
+
 .post_title {
     background-color: #212121;
     color: white;
@@ -21,28 +22,41 @@
 
 }
 
-.newpost input{
+.newpost input {
     width: 100%;
 }
-.newpost_body{
+
+.newpost_body {
     height: 10vh;
 }
 
-.newpost .newpost_button{
+.newpost .newpost_button {
     width: auto;
     margin-top: 20px;
 }
 
-.post_comments{
+.post_addcomment {
     /*background-color: #212121;*/
     color: white;
     margin: 2px 100px;
     padding: 10px 30px;
 }
 
-.post_comments .comment{
+.post_addcomment .comment {
     width: 100%;
     display: block;
     height: 4vh;
+}
+
+.post_comments {
+    color: white;
+    line-height: 2px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.commentpost {
+    color: white;
 }
 
