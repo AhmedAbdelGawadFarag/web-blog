@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
+    flash[:post_id] = @post.id
   end
 
   def create

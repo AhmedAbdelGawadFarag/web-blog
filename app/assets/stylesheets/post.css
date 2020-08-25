@@ -32,3 +32,17 @@
     width: auto;
     margin-top: 20px;
 }
+
+.post_comments{
+    /*background-color: #212121;*/
+    color: white;
+    margin: 2px 100px;
+    padding: 10px 30px;
+}
+
+.post_comments .comment{
+    width: 100%;
+    display: block;
+    height: 4vh;
+}
+

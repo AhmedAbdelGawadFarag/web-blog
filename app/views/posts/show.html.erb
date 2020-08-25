@@ -1,5 +1,5 @@
 <div class="post_title">
-  <h2 > article author: <%= @post.user.name %></h2>
+  <h2> article author: <%= @post.user.name %></h2>
   <h2> article author email: <%= @post.user.email %></h2>
   <h3> Title : <%= @post.title %></h3>
 </div>
@@ -12,3 +12,15 @@
 </div>
 
 
+<form class="post_comments" action="/comments" method="post">
+  <h2>Comments</h2>
+
+  <input placeholder="Add a comment" class="comment" type="text" name="comment[body]">
+
+  <input type="submit" value="Submit">
+
+</form>
+
+<% for comment in @post.comments %>
+  <P><%= comment.body %></P>
+<% end %>

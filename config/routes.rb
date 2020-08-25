@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show, :new, :create]
   resources :user_session, only: [:create]
 
+  resources :comments, only: [:create]
+
+
   get 'login', to: 'user_session#new'
   get 'logout', to: 'user_session#logout'
   get 'home', to: 'posts#index'
