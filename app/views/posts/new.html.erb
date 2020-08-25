@@ -1,9 +1,13 @@
-<div class="newpost">
-  <h3>Title</h3>
+<form action="/posts" method="post">
+  <div class="newpost">
+    <h3>Title</h3>
 
-  <input class="newpost_title" type="text">
+    <input class="newpost_title" type="text" name="post[title]">
 
-  <h3>Body</h3>
-  <input class="newpost_body" type="text">
+    <h3>Body</h3>
+    <input class="newpost_body" type="text" name="post[body]">
 
-</div>
+    <input class="newpost_button" type="submit" value="create post">
+  </div>
+
+</form>

@@ -26,3 +26,8 @@
 .newpost_body{
     height: 10vh;
 }
+
+.newpost .newpost_button{
+    width: auto;
+    margin-top: 20px;
+}
