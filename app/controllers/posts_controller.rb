@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  skip_before_action :checkAUTH, only: [:index,:show]
 
   def index
     @posts = Post.all
@@ -7,10 +8,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+
   end
 
   def create
-    userid = session[:user_id]
+    userid = session[:user_id]  
     post = Post.new(params.require('post').permit('title', 'body'))
     post.user_id = userid
     post.save()

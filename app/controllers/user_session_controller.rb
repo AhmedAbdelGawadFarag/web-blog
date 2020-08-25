@@ -1,5 +1,7 @@
 class UserSessionController < ApplicationController
 
+  skip_before_action :checkAUTH, only: [:new,:logout,:create]
+
   def new
     render :new
   end
