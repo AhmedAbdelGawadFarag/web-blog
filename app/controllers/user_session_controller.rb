@@ -10,7 +10,7 @@ class UserSessionController < ApplicationController
       session[:user_id] = user.id
       redirect_to posts_path
     else
-      flash[:loginfail] = "failed login"
+      flash[:loginfail] = "email or password is incorrect"
       redirect_to login_url
     end
   end
@@ -28,4 +28,10 @@ class UserSessionController < ApplicationController
   def home
     render :home
   end
+
+  def logout
+    session[:user_id] = nil
+    redirect_to login_url
+  end
+
 end

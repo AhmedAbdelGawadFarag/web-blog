@@ -13,15 +13,19 @@
 
 <div class="bar">
 
-  <a>Home</a>
-  <a>Articles</a>
-  <a>Tags</a>
-  <a class="login" href="<%= login_url %>">Log in</a>
+  <a href="<%= posts_url %>">Home</a>
+  <a href="<%= posts_url %>">Articles</a>
 
+</div>
+
+<div class="baroption">
   <% if logged_in %>
     <a> Hi,<%= current_user.name %></a>
+    <a href="/logout"> logout </a>
+  <% else %>
+    <a href="<%= login_url %>">Log in</a>
+    <a href="/users/new"> Sign up </a>
   <% end %>
-
 </div>
 
 

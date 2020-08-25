@@ -1,0 +1,28 @@
+.post_title {
+    background-color: #212121;
+    color: white;
+    margin: 30px 100px;
+    padding: 10px 30px;
+}
+
+.post_body {
+    background-color: #212121;
+    color: white;
+    margin: 30px 100px;
+    padding: 10px 30px;
+}
+
+.newpost {
+    background-color: #212121;
+    color: white;
+    margin: 50px 20%;
+    padding: 50px;
+
+}
+
+.newpost input{
+    width: 100%;
+}
+.newpost_body{
+    height: 10vh;
+}

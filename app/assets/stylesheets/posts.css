@@ -1,0 +1,15 @@
+.posts_headear {
+    color: white;
+    text-align: center;
+}
+
+.posts_list {
+    background-color: #212121;
+    margin: 30px 100px;
+    padding: 20px 50px;
+    color: white;
+}
+
+.post {
+    color: white;
+}

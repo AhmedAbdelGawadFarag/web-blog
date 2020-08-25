@@ -2,7 +2,7 @@
   <h1 class> login </h1>
 
   <form action="/user_session" method="post">
-    <p> error: <%= flash[:loginfail] %></p>
+    <p><%= flash[:loginfail] %></p>
 
     <%= render 'partials/form', action: :login %>
 

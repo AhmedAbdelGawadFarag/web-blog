@@ -1,1 +1,12 @@
-<h1>hiiiiiiiiiiiii</h1>
+<h1 class="posts_headear">All Articles</h1>
+
+
+<div class="posts_list">
+  <% cnt = 0 %>
+  <% for post in @posts %>
+    <% cnt = cnt +1 %>
+    <h3 class="post"><%= cnt %>-: <a href="<%= post_url(post.id) %>"><%= post.title %></a></h3>
+  <% end %>
+<a href="<%= new_post_path %>">Create New Article</a>
+</div>
+
