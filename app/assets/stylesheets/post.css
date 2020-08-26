@@ -48,12 +48,16 @@
     height: 4vh;
 }
 
-.post_comments {
+.post_comment{
     color: white;
     line-height: 2px;
     margin-left: 100px;
     margin-bottom: 30px;
     font-weight: bold;
+}
+
+.post_comment .comment_author{
+    font-size: 25px;
 }
 
 .commentpost {

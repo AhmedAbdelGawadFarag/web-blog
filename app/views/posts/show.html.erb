@@ -25,8 +25,8 @@
 
 <% for comment in @post.comments %>
 
-  <div class="post_comments">
-    <P> Author: <%= comment.post.user.name %></P>
+  <div class="post_comment">
+    <p class="comment_author"> comment author name: <%= comment.user_name %></p>
     <P> <%= comment.body %> </P>
   </div>
 
