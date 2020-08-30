@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     post = Post.new(params.require('post').permit('title', 'body'))
     post.user_id = userid
     post.save()
+    redirect_to posts_url
   end
 
   def new

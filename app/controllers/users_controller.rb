@@ -7,8 +7,19 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:name, :email, :password))
-    @user.save
+
+    if exist?(User.find_by_email(params[:user][:email])) == false
+      @user = User.new(params.require(:user).permit(:name, :email, :password))
+      @user.password = BCrypt::Password.create(@user.password)
+      @user.save
+      redirect_to login_url
+    else
+      flash[:loginfail] = "email already exists please use a diffrent email"
+      redirect_to new_user_url
+    end
+
+
+
   end
 
   def show
@@ -16,4 +27,10 @@ class UsersController < ApplicationController
     render :show
   end
 
+  def exist?(user)
+    if user != nil
+      return true
+    end
+    return false
+  end
 end

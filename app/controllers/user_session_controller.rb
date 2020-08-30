@@ -1,6 +1,6 @@
 class UserSessionController < ApplicationController
 
-  skip_before_action :checkAUTH, only: [:new,:logout,:create]
+  skip_before_action :checkAUTH, only: [:new, :logout, :create]
 
   def new
     render :new
@@ -19,8 +19,15 @@ class UserSessionController < ApplicationController
 
   def login(email, password)
     user = User.find_by_email(email)
-    if user != nil && user.password == password
-      return true
+
+
+    if user != nil
+      bcrypt_password = BCrypt::Password.new(user.password)
+      if bcrypt_password.is_password?(password) == true
+        return true
+      else
+        return false
+      end
     else
       return false
     end

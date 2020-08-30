@@ -1,6 +1,7 @@
 <div class="user">
   <h1> new user </h1>
 
+  <p><%= flash[:loginfail] %></p>
   <form action="/users" method="post">
 
     <label for="name"> User name: </label>
