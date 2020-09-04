@@ -3,7 +3,7 @@
     <h3>Title</h3>
 
     <input class="newpost_title" type="text" name="post[title]">
-
+    <input hidden name="authenticity_token" value="<%= form_authenticity_token %>" >
     <h3>Body</h3>
     <input class="newpost_body" type="text" name="post[body]">
 

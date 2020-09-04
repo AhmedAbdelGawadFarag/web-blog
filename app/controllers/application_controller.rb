@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
 
-  skip_before_action :verify_authenticity_token
   helper_method :logged_in, :current_user
-
+  protect_from_forgery with: :exception
   before_action :checkAUTH
 
   def logged_in

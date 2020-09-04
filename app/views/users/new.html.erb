@@ -7,6 +7,9 @@
     <label for="name"> User name: </label>
     <input type="text" id="name" required name="user[name]">
 
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
     <br>
     <br>
 

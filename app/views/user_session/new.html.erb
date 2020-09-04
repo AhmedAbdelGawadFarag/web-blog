@@ -6,7 +6,7 @@
 
     <%= render 'partials/form', action: :login %>
 
-
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input class="singupButton" type="submit" value="sign in !">
 
     <br>
