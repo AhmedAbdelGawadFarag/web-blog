@@ -1,6 +1,6 @@
 # README
 
-web plog using ruby on rails , where http requests made using rest api conventions , and only Authenticated users( signed in ) can post an article and comment on any post ,
+web blog using ruby on rails , where http requests made using rest api conventions , and only Authenticated users( signed in ) can post an article and comment on any post ,
 users data are hashed in the database and a lot more give it a try
 
 # technologies
